@@ -1,0 +1,22 @@
+.brand {
+  font-size: 2rem;
+}
+
+nav ul {
+  margin-top: 15px;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  padding: 25px;
+  background-color: white;
+}
+
+.error {
+  color: red !important;
+}
+
+.success {
+  color: green;
+}
