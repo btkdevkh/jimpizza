@@ -1,9 +1,15 @@
-.brand {
-  font-size: 2rem;
+body {
+  min-width: 320px;
 }
 
-nav ul {
-  margin-top: 15px;
+.responsive-img {
+  max-width: 200px !important;
+  height: 200px !important;
+  object-fit: cover;
+}
+
+.brand {
+  font-size: 2rem;
 }
 
 form {
