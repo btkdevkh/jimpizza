@@ -28,6 +28,17 @@ class PizzaModel {
     $this->db->execute();
   }
 
+  public function updateOne($id, $email, $title, $ingredients, $imgUrl) {
+    $this->db->query('UPDATE pizza SET email = :email, title = :title, ingredients = :ingredients, imgUrl = :imgUrl WHERE id = :id');
+    $this->db->bind(':id', $id);
+    $this->db->bind(':email', $email);
+    $this->db->bind(':title', $title);
+    $this->db->bind(':ingredients', $ingredients);
+    $this->db->bind(':imgUrl', $imgUrl);
+
+    $this->db->execute();
+  }
+
   public function deleteOne($id) {
     $this->db->query('DELETE FROM pizza WHERE id = :id');
     $this->db->bind(':id', $id);

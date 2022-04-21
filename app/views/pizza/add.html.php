@@ -1,6 +1,6 @@
 <section class="grey-text">
-  <h2 class="center">Add Pizza</h2>
-  <form action="<?= URLROOT ?>/pizza/create" method="POST" enctype="multipart/form-data">
+  <h2 class="center"><?= $id ? 'Update Pizza' : 'Add Pizza' ?></h2>
+  <form action="<?= URLROOT ?><?= $id ? '/pizza/update/' . $id : '/pizza/create' ?>" method="POST" enctype="multipart/form-data">
     <label>Your Email:</label>
     <input type="text" name="email" value="<?= $datas['email'] ?? null ?>">
     <p class="error"><?= $datas['emailErr'] ?? null ?></p>
@@ -19,13 +19,13 @@
         <input type="file" name="imgUrl">
       </div>
       <div class="file-path-wrapper">
-        <input class="file-path <?= !empty($datas['imgUrlErr']) ? 'invalid' : 'validate' ?>" type="text">
+        <input class="file-path <?= !empty($datas['imgUrlErr']) ? 'invalid' : 'validate' ?>" type="text" value="<?= $datas['imgUrl'] ?? null ?>">
       </div>
       <p class="error"><?= $datas['imgUrlErr'] ?? null ?></p>
     </div>
     
     <div class="center">
-      <input type="submit" value="Add Pizza" name="submit" class="btn z-depth-0">
+      <input type="submit" value="<?= $id ? 'Update Pizza' : 'Add Pizza' ?>" name="submit" class="btn z-depth-0">
     </div>
   </form>
 </section>

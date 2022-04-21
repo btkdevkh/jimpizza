@@ -14,6 +14,7 @@
         </div>
         <div class="card-action">
           <a href="<?= URLROOT ?>">Retour</a>
+          <a href="<?= URLROOT ?>/pizza/index/<?= $pizza->id ?>">Modifier</a>
           <a href="<?= URLROOT ?>/pizza/remove/<?= $pizza->id ?>" onclick="return confirm('Voulez-vous supprimer ce pizza ?')">Supprimer</a>
         </div>
       </div>
